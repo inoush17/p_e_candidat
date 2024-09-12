@@ -1,0 +1,26 @@
+.space1 form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.space1 input,
+select {
+    padding: 8px;
+}
+
+.space2-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.space2 form{
+    display: flex;
+    flex-direction: column;
+    font-family: roboto-bold;
+    font-size: 3vh;
+    gap: 20px;
+    justify-content: center;
+
+}

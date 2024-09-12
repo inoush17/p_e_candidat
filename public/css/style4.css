@@ -1,0 +1,73 @@
+@font-face {
+    font-family: roboto-regular;
+    src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(../assets/fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: roboto-medium;
+    src: url(../assets/fonts/roboto/Roboto-Medium.ttf);
+}
+
+.ouroffers-full-container{
+    max-width: 600px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ouroffers-container{
+    background-color: #49234043;
+    border: #492340 1px solid;
+    box-shadow: 0px 0px 20px 0px #492340;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 60px 0;
+}
+
+.ouroffers-container h2{
+    text-align: center;
+    font-family: roboto-bold;
+}
+
+.details-offers{
+    background-color: #fff;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px; 
+}
+
+.details-offers a{
+    background-color: #492340;
+    padding: 8px;
+    color: #fff;
+    font-family: roboto-bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.details-offers-flex{
+    display: flex;
+}
+
+.details-offers-flex2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

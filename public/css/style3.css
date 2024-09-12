@@ -1,0 +1,132 @@
+@font-face {
+    font-family: roboto-regular;
+    src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(../assets/fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: roboto-medium;
+    src: url(../assets/fonts/roboto/Roboto-Medium.ttf);
+}
+
+.home-full-container{
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.home-full-container h1{
+    font-family: roboto-bold;
+    font-size: 8vh;
+}
+
+.home-container{
+    background-color: #fff;
+    box-shadow: 15px 15px 20px 0px #492340;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 60px 0;
+}
+
+.position{
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+}
+
+.home-d-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.home-d-grid p{
+    font-family: roboto-medium;
+    font-size: 18px;
+}
+
+.home-d-grid img{
+    width: 500px;
+    height: 280px;
+}
+
+.home-separator{
+    background-color: #492340;
+    height: 4px;
+    width: 500px;
+    border-radius: 5px;
+}
+.home-separator2{
+    background-color: #492340;
+    height: 4px;
+    width: 500px;
+    border-radius: 5px;
+    margin: 0 0 0 40px;
+}
+.home-separator3{
+    background-color: #492340;
+    height: 4px;
+    width: 500px;
+    border-radius: 5px;
+    margin: 0 0 0 60px;
+}
+
+.full-separator-home{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.partenaire-home{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 10px;
+    background-color: #0000006e;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 15px;
+}
+
+.partenaire-logo{
+    display: flex;
+    gap: 60px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.direction{
+    display: flex;
+    flex-direction: column;
+}
+.separator-j{
+    height: 10px;
+    width: 100vw;
+    background-color: #fff;
+}
+.separator-j1{
+    height: 150px;
+    width: 100vw;
+    background-color: #fff;
+}

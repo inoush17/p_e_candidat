@@ -10,7 +10,7 @@
 
     <div class="home-admin">
         <h2>Bienvenue dans votre espace admin {{Auth::user()->name}}</h2>
-        <a href="">Création de ressource</a>
+        <a  href="">Création de ressource</a>
         <div class="home-admin1">
             <div class="border datatable-cover">
                 <table id="datatable" class="stripe">
@@ -24,34 +24,30 @@
                             <th>statuts</th>
                         </tr>
                     </thead>
-                    {{-- <tbody>
-                        @foreach ()
+                    <tbody>
+                        @foreach ($folders as $folder)
                             <tr>
                                 <td>
-                                    {{ $product->name }}
+                                    {{ $folder->last_name }}
                                 </td>
                                 <td>
-                                    {{ number_format($product->price, 0, " ") }} F CFA
+                                    {{ $folder->first_name }}
                                 </td>
                                 <td>
-                                    {{ $product->quantity }}
+                                    {{ $folder->date_of_birth }}
                                 </td>
-                                <td class="text-center">
-                                    <a href="{{ route('products.edit', $product->id) }}" class="icon-button primary">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </a>
-                                    &nbsp;
-                                    <form class="d-inline" action="{{ route('products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr(e) de vouloir supprimer le produit {{ $product->name }} ? Cette action sera irréversible !')">
-                                        @csrf
-                                        @method("DELETE")
-                                        <button type="submit" class="icon-button error">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
+                                <td>
+                                    {{ $folder->sex }}
+                                </td>
+                                <td>
+                                    {{ $folder->nationality }}
+                                </td>
+                                <td>
+                                    {{ $folder->status }}
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
                 </table>
             </div>
         </div>

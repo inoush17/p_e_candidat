@@ -5,7 +5,7 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Acceuil</a></li>
                     <li><a href="{{ route('ouroffers') }}">Nos offres</a></li>
-                    <li><a href="{{ route('apply1') }}">Candidature</a></li>
+                    <li><a href="{{ route('form1') }}">Candidature</a></li>
                     <li><a href="">Autres</a><br><br>
                         <div class="other">
                             <a href="">Evènements</a>

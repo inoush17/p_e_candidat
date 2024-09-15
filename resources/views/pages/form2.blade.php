@@ -16,7 +16,8 @@
 
         <div class="specifics-container">
             <div class="space2">
-                <form action="">
+                <form action="{{ route('form2.process') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="space2-container">
                         <label for="">Acte de naissance</label>
                         <input type="file" name="" id="">
@@ -44,8 +45,13 @@
                 </form>
             </div>
 
-            <div class="link">
-                <a href="">Envoyer dossier</a>
+            <div class="link-flex">
+                <div class="link" >
+                    <a href="{{ route('form1') }}">Page précédente</a>
+                </div>
+                <div class="link">
+                    <button type="submit">Envoyez le dossier</button>
+                </div>
             </div>
         </div><br><br><br><br>
     </div>

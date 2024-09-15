@@ -7,6 +7,10 @@
             <h4 class="title">E_Candidat</h4>
             <p class="small-title">Un monde nouveau pour vous</p>
         </div><br><br>
+
+        <a href=" {{ route('admin') }}">liste folder</a>
+
+        <br>
     
         <div class="container">
             <img src="{{ URL::asset('images/e-candidat5.png') }}" alt="" width="" class="img1">

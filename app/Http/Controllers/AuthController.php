@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Authentication\Apply1Request;
-use App\Http\Requests\Authentication\Apply2Request;
 use App\Http\Requests\Authentication\ForgottenPasswordRequest;
 use App\Http\Requests\Authentication\LoginRequest;
 use App\Http\Requests\Authentication\NewPasswordRequest;
 use App\Http\Requests\Authentication\OtpCodeRequest;
 use App\Http\Requests\Authentication\RegistrationRequest;
 use App\Interfaces\AuthenticationInterface;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -31,11 +27,12 @@ class AuthController extends Controller
 
         try {
             if($this->authInterface->login($data))
-            return redirect()->route('pages.home');
+            return redirect()->route('home');
         else
             return back()->with('error', 'Email ou mot de passe incorrect(s).');
 
         } catch (\Exception $ex) {
+        
             return back()->with('error', 'Une erreur est survenue lors du traitement, Réessayez !');
         }
     }
@@ -119,12 +116,6 @@ class AuthController extends Controller
         }
     }
 
-    public function apply1(Apply1Request $request)
-    {
+//     public function form1() {
         
-    }
-    public function apply2(Apply2Request $request)
-    {
-        
-    }
 }

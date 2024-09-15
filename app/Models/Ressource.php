@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Folder extends Model
+class Ressource extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'last_name',
-        'first_name',
-        'date_of_birth',
-        'phone_number',
-        'nationality',
-        'sex',
-        'marital_status',
+        'name',
+        'file',
+        'description'
     ];
 }

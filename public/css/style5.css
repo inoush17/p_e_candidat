@@ -55,6 +55,7 @@
     color: #fff;
 }
 
-.link{
-    text-align: right;
+.link-flex{
+    display: flex;
+    justify-content: space-between;
 }

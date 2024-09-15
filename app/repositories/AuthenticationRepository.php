@@ -23,14 +23,6 @@ class AuthenticationRepository implements AuthenticationInterface
     {
         return User::create($data);
     }
-    public function apply1(array $data)
-    {
-        // return User::create($data);
-    }
-    public function apply2(array $data)
-    {
-        // return User::create($data);
-    }
 
     public function forgottenpassword($email)
     {

@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Auth\Events\Login;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ViewController extends Controller
 {
@@ -41,13 +38,13 @@ class ViewController extends Controller
     {
         return view('pages.ouroffers');
     }
-    public function apply1()
+    public function form1()
     {
-        return view('pages.apply1');
+        return view('pages.form1');
     }
-    public function apply2()
+    public function form2()
     {
-        return view('pages.apply2');
+        return view('pages.form2');
     }
     public function admin()
     {

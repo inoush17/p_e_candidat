@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FolderController;
+use App\Http\Controllers\RessourceController;
 use App\Http\Controllers\ViewController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -18,12 +21,16 @@ Route::middleware([
     })->name('admins.admin');
 });
 
+Route::resource('admin', AdminController::class);
+
+Route::get('create', [RessourceController::class, 'create'])->name('created');
+
 Route::get('logout', [ViewController::class, 'logout'])->name('logout');
 Route::get('home', [ViewController::class, 'home'])->name('home');
 Route::get('ouroffers', [ViewController::class, 'ouroffers'])->name('ouroffers');
 Route::get('specifics', [ViewController::class, 'specifics'])->name('specifics');
-Route::get('apply1', [ViewController::class, 'apply1'])->name('apply1');
-Route::get('apply2', [ViewController::class, 'apply2'])->name('apply2');
+Route::get('form1', [ViewController::class, 'form1'])->name('form1');
+Route::get('form2', [ViewController::class, 'form2'])->name('form2');
 Route::get('admin', [ViewController::class, 'admin'])->name('admin');
 
 
@@ -43,6 +50,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.process');
 Route::post('/forgotten-password', [AuthController::class, 'forgottenpassword'])->name('forgottenpassword.process');
 Route::post('otp-code', [AuthController::class, 'checkotpcode'])->name('otpcode.process');
 Route::post('new-password', [AuthController::class, 'newpassword'])->name('newpassword.process');
+Route::post('/form1', [FolderController::class, 'form1'])->name('form1.process');
+Route::post('form2', [FolderController::class, 'form2'])->name('form2.process');
 
 
 

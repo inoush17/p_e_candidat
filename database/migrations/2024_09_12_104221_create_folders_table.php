@@ -15,16 +15,19 @@ return new class extends Migration
             $table->id();
             $table->string('last_name');
             $table->string('first_name');
+            $table->string('email');
             $table->date('date_of_birth');
             $table->string('phone_number');
             $table->string('nationality');
-            $table->string('sex')->nullable();
+            $table->string('neighborhood');
+            $table->string('sex');
             $table->string('marital_status')->default('on hold');
-            $table->string('birth_certificate')->nullable();
-            $table->string('identity_card')->nullable();
-            $table->string('latest_bulletin')->nullable();
+            $table->string('birth_certificate');
+            $table->string('identity_card');
+            $table->string('latest_bulletin');
             $table->string('cover_letter')->nullable();
             $table->string('file_annex')->nullable();
+            $table->string('statuts')->default('En cours');
             $table->timestamps();
         });
     }

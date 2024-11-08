@@ -21,8 +21,50 @@
 .specifics-full-container{
     max-width: 1000px;
     margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px #492340;
+    
+}
+
+.default-avatar{
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    text-decoration: none;
+    font-family: roboto-black;
+}
+
+.default-avatar2{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    text-decoration: none;
+    font-family: roboto-black;
+    font-size: 6vh;
+}
+
+.specifics-full-container2{
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
+    background-color: #492340a9;
+    box-shadow: 0px 0px 20px 0px #492340;
+}
+
+.specifics-full-container3{
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px #492340;
 }
 
 .specifics-container{
@@ -31,19 +73,28 @@
     border: #492340 1px solid;
     display: flex;
     flex-direction: column;
-    gap: 100px;
     padding: 60px 0;
     padding-left: 40px;
     padding-right: 40px;
+}
+.specifics-container2 p{
+    line-height: 25px;
+}
+
+.specifics-container2 h4{
+    font-size: 24px;
+    font-family: roboto-bold;
 }
 
 .link a{
     background-color: #fff;
     text-decoration: none;
     border: #492340 solid 1px;
-    padding: 10px 12px;
+    padding: 12px 14px;
     border-radius: 5px;
     color: #000;
+    font-family: roboto-medium;
+    font-size: 14px;
 }
 
 .link a:hover{
@@ -58,4 +109,37 @@
 .link-flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) *1deg ))
+        translateZ(550px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -8,10 +8,5 @@
     </div>
     <div class="separator-j1"></div>
 
-    <div>
-        <div>
-            Les ressources
-        </div>
-        
-    </div>
+    
 @endsection

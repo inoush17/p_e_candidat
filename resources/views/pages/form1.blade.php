@@ -6,47 +6,63 @@
         <div class="separator-j"></div>
         @include('includes.appbar3') <br>
     </div>
-    <div class="separator-j1"></div>
+    <div class="separator-j1"></div><br><br><br>
 
 
-    <form action="{{route('form1.process')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('form1.process') }}" method="POST" enctype="multipart/form-data">
 
         @csrf
-        <div class="specifics-full-container">
+        @if ($errors->any())
+            <ul class="alert alert-danger">
+                {!! implode('', $errors->all('<li>:message</li>')) !!}
+            </ul>
+        @endif
+
+        @if ($message = Session::get('error'))
+            <ul class="alert alert-danger">
+                <li>{{ $message }}</li>
+            </ul>
+        @endif
+
+        @if ($message = Session::get('success'))
+            <ul class="alert alert-success">
+                <li>{{ $message }}</li>
+            </ul>
+        @endif
+        <div class="specifics-full-container" id="part1">
             <h1>Bienvenue dans votre espace de candidature</h1>
             <h3>Veuillez remplir tous les champs</h3>
 
             <div class="space1">
-
+                <input type="text" name="last_name" value="" placeholder="Nom"><br>
+                <input type="text" name="first_name" value="" placeholder="Prénom(s)"><br>
+                <input type="text" name="email" id="email" placeholder="Email"><br>
+                <input type="date" name="date_of_birth" value="" placeholder="Date de naissance"><br>
+                <input type="tel" name="phone_number" value="" placeholder="Numéro de téléphone"><br>
+                <input type="text" name="nationality" value="" placeholder="Nationalité"><br>
+                <input type="text" name="neighborhood" value="" placeholder="Quartier"><br>
+                <select name="marital_status">
+                    <option value="">Choississez votre situation matrimoniale</option>
+                    <option value="Célibataire">Célibataire sans enfant</option>
+                    <option value="Célibataire">Célibataire avec enfant</option>
+                    <option value="Marié(e)">Marié(e)</option>
+                </select><br>
                 <div>
-                    <input type="text" name="last_name" value="" placeholder="Nom"><br>
-                    <input type="text" name="first_name" value="" placeholder="Prénom(s)"><br>
-                    <input type="text" name="date_of_birth" value="" placeholder="Date de naissance"><br>
-                    <input type="tel" name="phone_number" value="" placeholder="Numéro de téléphone"><br>
-                    <input type="text" name="nationality" value="" placeholder="Nationalité"><br>
-                    <div>
-                        <input type="radio" name="sexe" id="Homme" value="Homme">Homme
-                        <input type="radio" name="sexe" id="Femme" value="Femme">Femme
-                    </div><br>
-
-                    <select name="marital_status">
-                        <option value="">Choississez votre situation matrimoniale</option>
-                        <option value="Célibataire">Célibataire sans enfant</option>
-                        <option value="Célibataire">Célibataire avec enfant</option>
-                        <option value="Marié(e)">Marié(e)</option>
-                    </select>
+                    <input type="radio" name="sexe" id="Homme" value="Homme">Homme
+                    <input type="radio" name="sexe" id="Femme" value="Femme">Femme
                 </div>
 
             </div><br><br>
 
-            <div class="link">
-                <a href="{{ route('form2') }}">Page Suivante</a>
+            <div class="link-buttom">
+                <button type="submit" id="suivant">Page Suivante</button>
+                {{-- <a href="{{ route('form2') }}" ></a> --}}
             </div>
-
-
         </div><br><br>
 
-        <div class="specifics-full-container">
+
+
+        <div class="specifics-full-container" id="part2">
             <h1>Bienvenue dans votre espace de candidature</h1>
             <h3>Veuillez remplir tous les champs</h3>
 
@@ -54,44 +70,43 @@
 
             <div class="specifics-container">
                 <div class="space2">
-
-
                     <div class="space2-container">
                         <label for="">Acte de naissance</label>
-                        <input type="file" name="" id="">
+                        <input type="file" name="birth_certificate" id="" required>
                     </div>
                     <div class="space2-container">
-                        <label for="">Nationalité</label>
-                        <input type="file" name="" id="">
+                        <label for="identity_card">Nationalité</label>
+                        <input type="file" name="identity_card" required>
                     </div>
                     <div class="space2-container">
-                        <label for="">Dernier bulletin</label>
-                        <input type="file" name="" id="">
+                        <label for="latest_bulletin">Dernier bulletin</label>
+                        <input type="file" name="latest_bulletin" required>
                     </div>
                     <div class="space2-container">
-                        <label for="">Lettre de motivation</label>
-                        <input type="file" name="" id="">
+                        <label for="cover_letter">Lettre de motivation</label>
+                        <input type="file" name="cover_letter">
                     </div>
-                    <div class="space2-container">
+                    {{-- <div class="space2-container">
                         <label for="">Acte de naissance</label>
                         <input type="file" name="" id="">
-                    </div>
+                    </div> --}}
                     <div class="space2-container">
-                        <label for="">Annexe [ Facultatif ]</label>
-                        <input type="file" name="" id="">
+                        <label for="file_annex">Annexe [ Facultatif ]</label>
+                        <input type="file" name="file_annex">
                     </div>
 
-                </div>
+                </div> <br><br>
 
                 <div class="link-flex">
                     <div class="link">
-                        <a href="">Page précédente</a>
+                        <a href="" id="precedent" >Page précédente</a>
                     </div>
-                    <div>
+                    <div class="link-buttom">
                         <button type="submit">Envoyer le dossier</button>
                     </div>
                 </div>
             </div><br><br><br><br>
         </div>
     </form>
+
 @endsection

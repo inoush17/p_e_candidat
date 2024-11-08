@@ -29,6 +29,7 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    margin-top: 5%;
 }
 
 .login form{
@@ -46,10 +47,11 @@
 
 .login input{
     width: 100%;
-    padding: 8px;
+    padding: 8px 10px;
     background-color: #fff;
-    border: #492340 2px solid;
+    border: none;
     border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #492340;
 }
 
 .btn3{
@@ -57,8 +59,8 @@
     color: #fff;
     padding: 8px;
     width: 70%;
+    border: none;
     border-radius: 5px;
-    border: 2px solid #000;
     font-size: 16px;
     font-family: roboto-bold;
     cursor: pointer;
@@ -83,17 +85,23 @@
 .separator{
     height: 80vh;
     width: 4px;
+    margin-top: 4%;
     background-color: #492340;
-    margin-top: 50px;
     box-shadow: 12px 12px 4px 0 #000;
 
+}
+
+.new-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .separator2{
     height: 80vh;
     width: 4px;
     background-color: #492340;
-    margin-top: 50px;
     box-shadow: -12px 12px 4px 0 #000;
 }
 
@@ -108,7 +116,8 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-image: url(../images/e-candidat6-removebg-preview.png);
+    /* background-image: url(../images/e-candidat6-removebg-preview.png); */
+    /* background-color: #00000074; */
     background-size: cover;
     background-position: center;
 }
@@ -147,4 +156,100 @@
 .home-admin1{
     margin: 0 30px 0 30px;
     margin-top: 5%;
+}
+
+.barniere{
+    background-image: url(../images/e-candidat12.png);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TITLE{
+    position: relative;
+    transform: rotate(-30deg);
+    color: #492340;
+    background-color: #ffffff1f;
+    border: #492340 1px solid;
+    font-size: 2rem;
+    text-transform: uppercase;
+    /* animation: TITLE 1.5s linear infinite; */
+    animation: TITLE 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes TITLE{
+    0%{
+        transform: rotate(-20deg) scale(1);
+    }
+    50%{
+        transform: rotate(-20deg) scale(1.5);
+    }
+    100%{
+        transform: rotate(-20deg) scale(1);
+    }
+}
+
+.activity-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.activity-section h1{
+    text-align: center;
+}
+
+.activity-section-- img{
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 100px 0 100px 0;
+    box-shadow: -20px 30px 10px 10px #49234037;
+}
+
+.activity-section--{
+    display: flex;
+    gap: 30px;
+    
+}
+.activity-section---{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.activity-section--- a{
+    text-decoration: none;
+    background-color: #492340;
+    color: #fff;
+    font-family: roboto-medium;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.animated{
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: slidein;
+    color: #3c0930;
+}
+
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%; 
+    }
+
+    to {
+    margin-left: 0%;
+    width: 100%; 
+    }
 }

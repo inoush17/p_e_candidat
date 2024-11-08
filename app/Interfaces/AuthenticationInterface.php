@@ -9,4 +9,5 @@ interface AuthenticationInterface
     public function forgottenpassword(array $data);
     public function checkotpcode(array $data);
     public function newpassword(array $data);
+    public function profil(array $data);
 }

@@ -18,19 +18,19 @@
     src: url(../assets/fonts/roboto/Roboto-Medium.ttf);
 }
 
-.home-full-container{
+.home-full-container {
     max-width: 1000px;
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.home-full-container h1{
+.home-full-container h1 {
     font-family: roboto-bold;
     font-size: 8vh;
 }
 
-.home-container{
+.home-container {
     background-color: #fff;
     box-shadow: 15px 15px 20px 0px #492340;
     display: flex;
@@ -39,43 +39,45 @@
     padding: 60px 0;
 }
 
-.position{
+.position {
     position: fixed;
     width: 100vw;
     top: 0px;
 }
 
-.home-d-grid{
+.home-d-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
 }
 
-.home-d-grid p{
+.home-d-grid p {
     font-family: roboto-medium;
     font-size: 18px;
 }
 
-.home-d-grid img{
+.home-d-grid img {
     width: 500px;
     height: 280px;
 }
 
-.home-separator{
+.home-separator {
     background-color: #492340;
     height: 4px;
     width: 500px;
     border-radius: 5px;
 }
-.home-separator2{
+
+.home-separator2 {
     background-color: #492340;
     height: 4px;
     width: 500px;
     border-radius: 5px;
     margin: 0 0 0 40px;
 }
-.home-separator3{
+
+.home-separator3 {
     background-color: #492340;
     height: 4px;
     width: 500px;
@@ -83,14 +85,14 @@
     margin: 0 0 0 60px;
 }
 
-.full-separator-home{
+.full-separator-home {
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: center;
 }
 
-.partenaire-home{
+.partenaire-home {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -98,7 +100,7 @@
     align-items: center;
 }
 
-.other{
+.other {
     display: none;
     flex-direction: column;
     text-decoration: none;
@@ -109,23 +111,40 @@
     padding: 15px;
 }
 
-.partenaire-logo{
+.partenaire-logo {
     display: flex;
     gap: 60px;
     overflow-x: scroll;
     scrollbar-width: none;
 }
 
-.direction{
+.direction {
     display: flex;
     flex-direction: column;
+    animation: direction 4000ms infinite;
 }
-.separator-j{
+
+@keyframes direction {
+    from {
+        transform:
+            rotate(-30deg) translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            rotate(0deg) translateY(0%);
+        opacity: 1;
+    }
+}
+
+.separator-j {
     height: 10px;
     width: 100vw;
     background-color: #fff;
 }
-.separator-j1{
+
+.separator-j1 {
     height: 150px;
     width: 100vw;
     background-color: #fff;

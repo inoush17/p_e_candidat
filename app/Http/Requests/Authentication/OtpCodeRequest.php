@@ -30,11 +30,8 @@ class OtpCodeRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'email.email' => 'L\'adresse e-mail est invalide.',
-            'email.required' => 'L\'adresse e-mail est requise.',
-            'email.min' => 'L\'e-mail doit contenir au minimum 3 caractères.',
-            'email.max' => 'L\'e-mail doit contenir au maximum 128 caractères.',
-            'code.required' => 'Le mot de passe est requis.',
+            'email.required' => 'L\'email est invalide.',
+            'code.required' => 'Le code est invalide.',
             'code.min' => 'Le code doit contenir au minimum 4 caractères.',
             'code.max' => 'Le code doit contenir au maximum 6 caractères.',
         ];

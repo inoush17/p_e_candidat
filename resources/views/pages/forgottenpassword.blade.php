@@ -15,6 +15,23 @@
 
             <form action="{{ route('forgottenpassword.process') }}" method="POST">
                 @csrf
+                @if ($errors->any())
+                    <ul class="alert alert-danger">
+                        {!! implode('', $errors->all('<li>:message</li>')) !!}
+                    </ul>
+                @endif
+
+                @if ($message = Session::get('error'))
+                    <ul class="alert alert-danger ">
+                        <li>{{ $message }}</li>
+                    </ul>
+                @endif
+
+                @if ($message = Session::get('success'))
+                    <ul class="alert alert-success">
+                        <li>{{ $message }}</li>
+                    </ul>
+                @endif
 
                 <div class="form-container">
 

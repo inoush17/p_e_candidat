@@ -11,29 +11,41 @@
             <div class="login-title">
                 <h1>Création du nouveau mot de passe</h1>
 
-                <p>Veuillez renseignez les champs et confirmer votre <br> nouveau mot de passe</p>
+                <p>Veuillez renseignez les champs et confirmer votre <br>
+                    nouveau mot de passe</p>
             </div>
 
             <form action="{{ route('newpassword.process') }}" method="POST">
-
                 @csrf
+                @if ($errors->any())
+                    <ul class="alert alert-danger">
+                        {!! implode('', $errors->all('<li>:message</li>')) !!}
+                    </ul>
+                @endif
+
+                @if ($message = Session::get('error'))
+                    <ul class="alert alert-danger ">
+                        <li>{{ $message }}</li>
+                    </ul>
+                @endif
+
+                @if ($message = Session::get('success'))
+                    <ul class="alert alert-success">
+                        <li>{{ $message }}</li>
+                    </ul>
+                @endif
+
                 <div class="form-container">
-                    <div class="new-space">
-                        <label for="password">Mot de passe actuel</label>
-                        <input type="password" name="password" id="password"
-                            placeholder="Saisir le mot de passe actuel ici ...">
+                    
+                    <div class="login-space">
+                        <label for="">Nouveau mot de passe</label>
+                        <input type="password" name="password" id="password" placeholder="Saisir le nouveau mot de passe  ici ...">
                     </div>
 
                     <div class="login-space">
-                        <label for="password">Nouveau mot de passe</label>
+                        <label for="">Confirmer le mot de passe</label>
                         <input type="password" name="password" id="password"
-                            placeholder="Saisir le nouveau mot de passe  ici ...">
-                    </div>
-
-                    <div class="login-space">
-                        <label for="passwordconfirm">Confirmer le mot de passe</label>
-                        <input type="password" name="passwordconfirm" id="passwordconfirm"
-                            placeholder="Confirmer le nouveau mot de passe ici ...">
+                            placeholder="Saisir à nouveau le nouveau mot de passe ici ...">
                     </div>
 
                     <button type="submit" class="btn3">Soumettre</button>

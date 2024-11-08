@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Folder;
+use App\Models\Offers;
+use App\Models\Ressource;
+use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
@@ -26,17 +30,18 @@ class ViewController extends Controller
     {
         return view('pages.otpcode');
     }
-    public function specifics()
+    public function specifics(string $id)
     {
-        return view('pages.specifics');
+        $offer = Offers::find($id);
+
+
+        return view('pages.specifics', [
+            'offer' => $offer
+        ]);
     }
     public function home()
     {
         return view('pages.home');
-    }
-    public function ouroffers()
-    {
-        return view('pages.ouroffers');
     }
     public function form1()
     {
@@ -48,8 +53,61 @@ class ViewController extends Controller
     }
     public function admin()
     {
-        return view('admins.admin');
+        $folders = Folder::all();
+
+        return view('admins.admin', [
+            'folders' => $folders
+
+        ]);
     }
+    public function perso()
+    {
+        return view('perso.perso');
+    }
+    public function index()
+    {
+        return view('ressource.create');
+    }
+    public function indexOffers()
+    {
+        return view('offers.create');
+    }
+    public function list()
+    {
+        // Récupérer toutes les ressources
+        $ressources = Ressource::all();
+
+        // Passer les ressources à la vue
+        return view('ressource.list', compact('ressources'));
+    }
+    public function listOffers()
+    {
+        // Récupérer toutes les ressources
+        $offers = Offers::all();
+
+        // Passer les ressources à la vue
+        return view('offers.list', compact('offers'));
+    }
+    public function create()
+    {
+        return view('ressource.create');
+    }
+    public function createOffers()
+    {
+        return view('offers.create');
+    }
+    public function profil()
+    {
+        return view('pages.profil');
+    }
+
+    public function show(Request $request)
+    {
+        $folder = Folder::findOrFail($request->id);
+
+        return view('admins.show', compact('folder'));
+    }
+
     public function logout()
     {
         return redirect('/');

@@ -1,6 +1,6 @@
 <footer>
     <div>
-        <div class="footer-d-grid">
+        <div class="footer-d-grid" id="contact">
             <div>
                 <h3>Liens utiles</h3>
                 <div class="footer-link">
@@ -18,7 +18,7 @@
             </div>
             <div class="footer-separator"></div>
             <div>
-                <h3>Contacs</h3>
+                <h3>Contacts</h3>
                 <div class="footer-contacts">
                     <div class="space">
                         Téléphone <br>
@@ -43,10 +43,35 @@
                 </div>
             </div>
             <div class="footer-separator"></div>
+
             <div>
-                <h3>Liens utiles</h3>
-                <div class="footer-link">
-                    
+                <h3>Réseaux sociaux</h3>
+                <div class="footer-link2--">
+                    <div class="footer-link2">
+                        <a href="">
+                            <img src="{{ URL::asset('images/facebook.png') }}" alt="" width="40">
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                    <div class="footer-link2">
+                        <a href="">
+                            <img src="{{ URL::asset('images/x.png') }}" alt="" width="40">
+                            <div>whatsapp</div>
+                        </a>
+                    </div>
+
+                    <div class="footer-link2">
+                        <a href="">
+                            <img src="{{ URL::asset('images/linkedin.png') }}" alt="" width="40">
+                            <div>LinkedIn</div>
+                        </a>
+                    </div>
+                    <div class="footer-link2">
+                        <a href="">
+                            <img src="{{ URL::asset('images/icons8-instagram-48.png') }}" alt="" width="40">
+                            <div>Instagram</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,17 +84,35 @@
 
         <div class="bottom-footer">
             <div>
-                <img src="{{ URL::asset('images/e-candidat-iphone-removebg-preview.png') }}" alt="" width="450" class="">
+                <img src="{{ URL::asset('images/e-candidat-iphone-removebg-preview.png') }}" alt=""
+                    width="600">
             </div>
+
             <form action="">
-                <label for="">Nom</label><br>
-                <input type="text" name="name" id="name" placeholder="Votre nom"><br>
-                <label for="">E-mail</label><br>
-                <input type="text" name="name" id="name" placeholder="Votre E-mail"><br>
-                <label for="">Message</label><br>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea><br>
-                <button type="submit">ENVOYEZ LE MESSAGE</button>
+                <div class="foot">
+                    <div class="send-email">
+                        <label for="">Nom</label>
+                        <input type="text" name="name" id="name" placeholder="Votre nom">
+                    </div>
+    
+                    <div class="send-email">
+                        <label for="">E-mail</label>
+                        <input type="text" name="name" id="name" placeholder="Votre E-mail">
+                    </div>
+    
+                    <div class="send-email">
+                        <label for="">Message</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                    </div>
+    
+                    <button type="submit">ENVOYEZ LE MESSAGE</button>
+                </div>
             </form>
+
+            <div>
+                <img src="{{ URL::asset('images/e-candidat-iphone-removebg-preview.png') }}" alt=""
+                    width="300">
+            </div>
         </div>
     </div>
 </footer>

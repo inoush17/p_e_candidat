@@ -27,6 +27,7 @@ class Form1Request extends FormRequest
             'date_of_birth' => 'required|date',
             'phone_number' => 'required|string|max:15',
             'nationality' => 'required|string|max:255',
+            'neighborhood' =>'required|string|maw:200',
             'sex' => 'required|in:Homme,Femme',
             'marital_status' => 'required|string',
         ];

@@ -11,11 +11,14 @@ class AdminController extends Controller
     public function index()
     {
         $folders = Folder::all();
-    
-
         return view('admins.admin', [
             'folders' => $folders
             
     ]);
+    }
+
+    public function show()
+    {
+        return view('admins.show');
     }
 }
